@@ -1,10 +1,13 @@
 {
   "name": "vite-tsconfig-paths-issue-minimal-repro",
   "version": "1.0.0",
-  "description": "",
+  "description": "Minimal reproduction of the issue with `vite-tsconfig-paths` not applying to `vite-node`",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "vite build",
+    "dev": "vite dev",
+    "script": "vite-node ./random-script.ts",
+    "test": "vitest"
   },
   "dependencies": {},
   "devDependencies": {
@@ -14,5 +17,6 @@
     "vite-tsconfig-paths": "^4.2.3",
     "vitest": "^2.1.9"
   },
-  "private": true
+  "private": true,
+  "type": "module"
 }
